@@ -122,12 +122,12 @@ function App() {
   return (
     <div class="h-screen max-h-screen bg-slate-50 text-slate-800 flex flex-col font-sans selection:bg-blue-500 selection:text-white overflow-hidden">
       {/* Header */}
-      <header class="border-b border-slate-200 bg-white sticky top-0 z-30 px-6 py-3 flex flex-col lg:flex-row lg:items-center justify-between gap-4 shrink-0 shadow-sm">
+      <header class="border-b border-blue-700 bg-blue-600 sticky top-0 z-30 px-6 py-3 flex flex-col lg:flex-row lg:items-center justify-between gap-4 shrink-0 shadow-sm">
         <div class="flex items-center space-x-3">
-          <img src="/logo.png" alt="Recoup Logo" class="h-11 w-auto object-contain rounded-lg shadow-sm border border-slate-100" />
+          <img src="/logo.png" alt="Recoup Logo" class="h-11 w-auto object-contain rounded-lg shadow-sm border border-blue-400" />
           <div>
-            <h1 class="text-xl font-bold tracking-tight text-slate-900">Recoup</h1>
-            <p class="text-xs text-slate-500">Razorpay Revenue Recovery Pipeline</p>
+            <h1 class="text-xl font-bold tracking-tight text-white">Recoup</h1>
+            <p class="text-xs text-blue-100">Razorpay Revenue Recovery Pipeline</p>
           </div>
         </div>
 
@@ -135,38 +135,38 @@ function App() {
         <div class="flex items-center space-x-5 text-sm font-bold overflow-x-auto pb-1 lg:pb-0 no-scrollbar">
           <button 
             onClick={() => setActiveTab('home')}
-            class={`pb-1 lg:pb-0 transition relative shrink-0 ${activeTab === 'home' ? 'text-blue-600 font-black' : 'text-slate-500 hover:text-slate-800'}`}
+            class={`pb-1 lg:pb-0 transition relative shrink-0 ${activeTab === 'home' ? 'text-white font-black' : 'text-blue-200 hover:text-white'}`}
           >
             <span>Home</span>
-            {activeTab === 'home' && <span class="hidden lg:block absolute -bottom-5.5 left-0 right-0 h-0.5 bg-blue-600"></span>}
+            {activeTab === 'home' && <span class="hidden lg:block absolute -bottom-5.5 left-0 right-0 h-0.5 bg-white"></span>}
           </button>
           <button 
             onClick={() => setActiveTab('logs')}
-            class={`pb-1 lg:pb-0 transition relative shrink-0 ${activeTab === 'logs' ? 'text-blue-600 font-black' : 'text-slate-500 hover:text-slate-800'}`}
+            class={`pb-1 lg:pb-0 transition relative shrink-0 ${activeTab === 'logs' ? 'text-white font-black' : 'text-blue-200 hover:text-white'}`}
           >
             <span>Audit Log Trail</span>
-            {activeTab === 'logs' && <span class="hidden lg:block absolute -bottom-5.5 left-0 right-0 h-0.5 bg-blue-600"></span>}
+            {activeTab === 'logs' && <span class="hidden lg:block absolute -bottom-5.5 left-0 right-0 h-0.5 bg-white"></span>}
           </button>
           <button 
             onClick={() => setActiveTab('txns')}
-            class={`pb-1 lg:pb-0 transition relative shrink-0 ${activeTab === 'txns' ? 'text-blue-600 font-black' : 'text-slate-500 hover:text-slate-800'}`}
+            class={`pb-1 lg:pb-0 transition relative shrink-0 ${activeTab === 'txns' ? 'text-white font-black' : 'text-blue-200 hover:text-white'}`}
           >
             <span>All Transactions ({transactions.length})</span>
-            {activeTab === 'txns' && <span class="hidden lg:block absolute -bottom-5.5 left-0 right-0 h-0.5 bg-blue-600"></span>}
+            {activeTab === 'txns' && <span class="hidden lg:block absolute -bottom-5.5 left-0 right-0 h-0.5 bg-white"></span>}
           </button>
           <button 
             onClick={() => setActiveTab('outbox')}
-            class={`pb-1 lg:pb-0 transition relative shrink-0 ${activeTab === 'outbox' ? 'text-blue-600 font-black' : 'text-slate-500 hover:text-slate-800'}`}
+            class={`pb-1 lg:pb-0 transition relative shrink-0 ${activeTab === 'outbox' ? 'text-white font-black' : 'text-blue-200 hover:text-white'}`}
           >
             <span>WhatsApp Outbox ({outbox.length})</span>
-            {activeTab === 'outbox' && <span class="hidden lg:block absolute -bottom-5.5 left-0 right-0 h-0.5 bg-blue-600"></span>}
+            {activeTab === 'outbox' && <span class="hidden lg:block absolute -bottom-5.5 left-0 right-0 h-0.5 bg-white"></span>}
           </button>
           <button 
             onClick={() => setActiveTab('human')}
-            class={`pb-1 lg:pb-0 transition relative shrink-0 ${activeTab === 'human' ? 'text-blue-600 font-black' : 'text-slate-500 hover:text-slate-800'}`}
+            class={`pb-1 lg:pb-0 transition relative shrink-0 ${activeTab === 'human' ? 'text-white font-black' : 'text-blue-200 hover:text-white'}`}
           >
             <span>Human Queue ({escalations.length})</span>
-            {activeTab === 'human' && <span class="hidden lg:block absolute -bottom-5.5 left-0 right-0 h-0.5 bg-blue-600"></span>}
+            {activeTab === 'human' && <span class="hidden lg:block absolute -bottom-5.5 left-0 right-0 h-0.5 bg-white"></span>}
           </button>
         </div>
 
@@ -174,7 +174,7 @@ function App() {
           <button 
             onClick={fetchData} 
             disabled={loading}
-            class="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white border border-transparent px-4.5 py-2 rounded-lg text-sm font-bold transition disabled:opacity-50 shadow-sm"
+            class="flex items-center space-x-2 bg-white hover:bg-blue-50 active:bg-blue-100 text-blue-600 border border-white px-4.5 py-2 rounded-lg text-sm font-bold transition disabled:opacity-50 shadow-sm"
           >
             <RefreshCw class={`h-4 w-4 ${loading ? 'animate-spin' : ''}`} />
             <span>{loading ? 'Refreshing...' : 'Refresh'}</span>

@@ -25,7 +25,6 @@ Recoup is an autonomous revenue recovery agent pipeline that detects failed or a
 ## Table of Contents
 
 - [The Problem](#the-problem)
-- [Live Deployments & Instant Testing](#live-deployments--instant-testing)
 - [Screenshots](#screenshots)
 - [Why Recoup](#why-recoup)
 - [Pipeline Architecture](#pipeline-architecture)
@@ -34,6 +33,7 @@ Recoup is an autonomous revenue recovery agent pipeline that detects failed or a
 - [Core Product Capabilities](#core-product-capabilities)
 - [Evaluation Performance Metrics](#evaluation-performance-metrics)
 - [Testing & Reliability](#testing--reliability)
+- [Live Deployments & Instant Testing](#live-deployments--instant-testing)
 - [Local Setup & Development](#local-setup--development)
 - [Roadmap](#roadmap)
 
@@ -73,28 +73,12 @@ Recoup's core bet: **diagnose before you act.** A deterministic rules engine dec
 * 🌐 **Live Dashboard (Frontend)**: [https://recoup-seven-omega.vercel.app](https://recoup-seven-omega.vercel.app)
 * ⚙️ **Production API (Backend)**: [https://recoup-9wrh.onrender.com](https://recoup-9wrh.onrender.com)
 * 🗄️ **Production Database**: Neon Serverless Postgres Cloud
-* 🐙 **GitHub Repository**: [https://github.com/dola2164-png/Recoup-Razorpay-Revenue-Recovery-Pipeline](https://github.com/dola2164-png/Recoup-Razorpay-Revenue-Recovery-Pipeline))
 
-### 🧪 How Judges Can Test Live in 30 Seconds (No Code/Setup Required)
-We built a **Live Webhook Simulator** directly into the home page:
-1. Open the [Live Dashboard](https://recoup-seven-omega.vercel.app) (Razorpay-inspired light fintech theme).
-2. On the **Home** tab, find the **Simulate Razorpay Webhook Failure** form.
-3. Fill in the details (Customer Name, Amount, Failure Reason) and click **Send Simulation Webhook**.
-4. Click **Audit Log Trail** in the header to watch the recovery pipeline execute in real time.
-5. Click **WhatsApp Outbox** to see the personalized English/Hinglish copy drafted for that customer.
-6. Click **All Transactions** to see overall metrics and recovery status across the batch.
-
-> ⏱️ Note for judges: the API is hosted on Render's free tier, which spins down when idle. The **first** request after a period of inactivity may take 20–30 seconds to wake up — this is a hosting artifact, not pipeline latency.
-
----
 
 ## Screenshots
 
-
-<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/10d05899-e2cf-4c48-b395-55a506aee630" />
-<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/85ba3daa-892c-4b21-a953-c12cbba407db" />
-
-
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/7075ce11-4af8-4660-8983-d02221a44c82" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/11ef049b-0793-41e4-9286-43384cecefcd" />
 
 ---
 
@@ -266,7 +250,18 @@ python -m pytest tests/test_decide.py tests/test_diagnose.py                 # m
 ```
 
 ---
+### 🧪 How Judges Can Test Live in 30 Seconds (No Code/Setup Required)
+We built a **Live Webhook Simulator** directly into the home page:
+1. Open the [Live Dashboard](https://recoup-seven-omega.vercel.app) (Razorpay-inspired light fintech theme).
+2. On the **Home** tab, find the **Simulate Razorpay Webhook Failure** form.
+3. Fill in the details (Customer Name, Amount, Failure Reason) and click **Send Simulation Webhook**.
+4. Click **Audit Log Trail** in the header to watch the recovery pipeline execute in real time.
+5. Click **WhatsApp Outbox** to see the personalized English/Hinglish copy drafted for that customer.
+6. Click **All Transactions** to see overall metrics and recovery status across the batch.
 
+> ⏱️ Note for judges: the API is hosted on Render's free tier, which spins down when idle. The **first** request after a period of inactivity may take 20–30 seconds to wake up — this is a hosting artifact, not pipeline latency.
+
+---
 ## Local Setup & Development
 
 ### Prerequisites

@@ -179,9 +179,7 @@ function App() {
             <RefreshCw class={`h-4 w-4 ${loading ? 'animate-spin' : ''}`} />
             <span>{loading ? 'Refreshing...' : 'Refresh'}</span>
           </button>
-          <div class="flex items-center text-xs text-slate-500" title="API Connected">
-            <span class="inline-block w-2.5 h-2.5 bg-blue-600 rounded-full animate-pulse"></span>
-          </div>
+          
         </div>
       </header>
 
@@ -320,7 +318,6 @@ function App() {
             <div class="lg:col-span-7 bg-white border border-slate-200 rounded-2xl overflow-hidden flex flex-col h-full shadow-sm">
               <div class="p-5 max-w-2xl mx-auto overflow-y-auto flex-grow max-h-full">
                 <h3 class="text-lg font-bold mb-2 text-slate-800 flex items-center space-x-2">
-                  <span class="inline-block w-2.5 h-2.5 rounded-full bg-blue-600 animate-pulse border border-blue-400 shadow-[0_0_8px_rgba(37,99,235,0.8)]"></span>
                   <span>Simulate Razorpay Webhook Failure</span>
                 </h3>
                 <p class="text-xs text-slate-500 mb-6">

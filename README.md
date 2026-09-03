@@ -91,8 +91,8 @@ We built a **Live Webhook Simulator** directly into the home page:
 ## Screenshots
 
 
-<img width="920" height="500" alt="Screenshot (663)" src="https://github.com/user-attachments/assets/39ea5723-f671-4b0b-b0f3-253dc2e7bbd6" />
-<img width="920" height="500" alt="Screenshot (662)" src="https://github.com/user-attachments/assets/0f223131-b89f-460b-a06d-a03f71b0bb0c" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/10d05899-e2cf-4c48-b395-55a506aee630" />
+<img width="1920" height="1200" alt="image" src="https://github.com/user-attachments/assets/85ba3daa-892c-4b21-a953-c12cbba407db" />
 
 
 
